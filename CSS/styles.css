@@ -1,3 +1,35 @@
+/* Fuentes para el proyecto */
+:root {
+  --fontTitles: "Be Vietnam Pro", sans-serif;
+  --fontText: "Be Vietnam Pro", sans-serif;
+}
 
+/* Colores */
+:root {
+  --firstColorPrimary: #242D52;
+  --secondColorPrimary: #F3603C;
+  --colorBlack: #1D1E25;
+  --colorWhite: #FFFFFF;
+  --colorSecondary: #FFF0EC;
+}
+
+/* Mixin para before */
+/* Mixin para after */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
 
 /*# sourceMappingURL=styles.css.map */
