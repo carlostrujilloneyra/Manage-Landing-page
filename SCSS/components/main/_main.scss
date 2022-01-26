@@ -1,2 +1,50 @@
 @use '../../abstracts/variables' as *;
 @use '../../abstracts/mixins' as *;
+
+.main{
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	row-gap: 6rem;
+	padding: 0 2.4rem;
+
+	@include responsive(tablet){
+		padding: 0 3.6rem;
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: repeat(2, minmax(min-content,1fr));
+		grid-template-rows: repeat(1, minmax(54rem,55rem));
+		column-gap: 2.4rem;
+		row-gap: 0;
+		padding: 0 10rem;
+	}
+
+	@include responsive(1300px){
+		grid-template-columns: minmax(44rem, 46rem) minmax(54rem, 56rem);
+		column-gap: 4.8rem;
+	}
+
+	// Primera parte del main
+
+	&__first-part{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		@include responsive(desktop){
+			align-items: flex-start;
+			text-align: start;
+		}
+	}
+
+
+	// Segunda parte
+
+	&__second-part{
+
+		@include responsive(desktop){
+			padding-left: 2.4rem
+		}
+	}
+}
