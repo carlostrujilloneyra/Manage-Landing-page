@@ -26,6 +26,8 @@ p, a{
 p{
 	font-size: 1.4rem;
 	line-height: 1.7;
+	font-weight: 200;
+	color: var(--colorText);
 
 	@include responsive(tablet){
 		font-size: 1.6rem;
