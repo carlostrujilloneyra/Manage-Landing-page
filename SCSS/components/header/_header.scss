@@ -1,0 +1,73 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    background-color: var(--colorWhite);
+    padding: 0rem 2.4rem;
+    border-bottom: 0.2px solid rgba(0, 0, 0, .1);
+    z-index: 200;
+
+    @include responsive(tablet){
+        position: relative;
+        border-bottom: none;
+        padding: 0 4.8rem;
+    }
+
+    @include responsive(desktop){
+        padding: 0 10rem;
+    }
+
+    &__logo{
+        display: block;
+        width: 15rem;
+        height: 3rem;
+    }
+}
+ 
+.main-header__content{
+    position: absolute;
+    top: 8rem;
+    right: -70vw;
+    display: flex;
+    width: 70vw;
+    height: calc(100vh - 8rem);
+    z-index: 1000;
+    transition: right .5s;
+
+    &--new{
+        right: 0;
+    }
+    
+
+    @include responsive(700px){
+        position: static;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 8rem;
+        justify-content: center;
+    }
+}
+
+// Enlace que engloba al Logo de Manage
+
+.home{
+    width: 15rem;
+    height: 3rem;
+    margin-right: 1.6rem;
+
+    @include responsive(tablet){
+        margin-right: 2.4rem;
+    }
+
+    @include responsive(desktop){
+        margin-right: 3.2rem;
+    }
+}
