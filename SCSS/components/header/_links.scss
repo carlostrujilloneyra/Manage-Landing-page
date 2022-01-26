@@ -37,8 +37,8 @@
 
     @include responsive(desktop){
         &:hover{
-            color: var(--firstColorPrimary);
             transition: all .4s;
+            color: rgb(134, 150,157);
         }
     
         &:hover::before{
