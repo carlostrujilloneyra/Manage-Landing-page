@@ -111,7 +111,7 @@ a {
   .main-header {
     position: relative;
     border-bottom: none;
-    padding: 0 4.8rem;
+    padding: 0 3.6rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -129,14 +129,14 @@ a {
   position: absolute;
   top: 12rem;
   right: -100vw;
-  width: calc(100vw - 2.4rem);
+  width: calc(100vw - 3.2rem);
   display: flex;
-  height: 32rem;
+  height: 30.5rem;
   z-index: 1000;
   transition: right 0.5s;
 }
 .main-header__content--new {
-  right: 1rem;
+  right: 1.5rem;
 }
 @media screen and (min-width: 700px) {
   .main-header__content {
@@ -188,11 +188,11 @@ a {
 }
 
 .main-header__nav {
-  width: 100%;
+  width: calc(100vw - 3.2rem);
   background-color: var(--colorWhite);
-  height: 32rem;
-  border: 0.1rem solid black;
-  background-color: aqua;
+  height: 30.5rem;
+  box-shadow: 0.2rem 0.2rem 0.8rem outside rgba(0, 0, 0, 0.1);
+  border-radius: 1.2rem;
 }
 @media screen and (min-width: 700px) {
   .main-header__nav {
@@ -321,7 +321,12 @@ a {
 @media screen and (min-width: 700px) {
   .main-button {
     color: var(--colorWhite);
-    padding: 1.2rem 1.6rem;
+    padding: 1.6rem 2.4rem;
+  }
+}
+@media screen and (min-width: 820px) {
+  .main-button {
+    padding: 1.6rem 3.2rem;
   }
 }
 .main-button:hover::before {
@@ -346,15 +351,38 @@ a {
 }
 
 .main-hero {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding: 3.6rem 2.4rem 2.4rem 2.4rem;
   row-gap: 3.6rem;
+  overflow: hidden;
+}
+.main-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0.599));
+  opacity: 0;
+  transition: all 0.7s;
+}
+@media screen and (min-width: 740px) {
+  .main-hero::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main-hero {
+    padding: 3.6rem 3.6rem 3.2rem 3.6rem;
+  }
 }
 @media screen and (min-width: 740px) {
   .main-hero {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 4.8rem 4.8rem 3.2rem 4.8rem;
+    grid-template-columns: minmax(56rem, 60rem);
+    grid-template-rows: minmax(50rem, 52rem) minmax(38rem, 40rem);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -375,6 +403,9 @@ a {
   .main-hero {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.main-hero--new::before {
+  opacity: 1;
 }
 
 .main-hero__info {
@@ -399,6 +430,11 @@ a {
 
 .main-hero__title {
   margin-bottom: 1.2rem;
+}
+@media screen and (min-width: 740px) {
+  .main-hero__title {
+    margin-bottom: 2.4rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .main-hero__title {
@@ -493,10 +529,8 @@ a {
   font-size: 1.6rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .main-button--hero {
-    margin-bottom: 4rem;
-  }
+.main-button--hero {
+  margin-bottom: 4rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
