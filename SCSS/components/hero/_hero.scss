@@ -9,6 +9,7 @@
 	grid-template-columns: repeat(1,1fr);
 	padding: 3.6rem 2.4rem 2.4rem 2.4rem;
 	row-gap: 3.6rem;
+	margin-bottom: 3.2rem;
 	overflow: hidden;
 
 	&::before{
@@ -25,6 +26,7 @@
 	
 	@include responsive(700px){
 		padding: 3.6rem 3.6rem 3.2rem 3.6rem;
+		margin-bottom: 4.8rem;
 	}
 
 	@include responsive(tablet){
@@ -36,6 +38,7 @@
 		grid-template-columns: 1fr minmax(46rem, 48rem);
 		grid-template-rows: repeat(1, minmax(54rem, 1fr));
 		column-gap: 2.4rem;
+		margin-bottom: 6.4rem;
 		padding: 10rem 10rem 3.2rem 10rem;	
 	}
 
