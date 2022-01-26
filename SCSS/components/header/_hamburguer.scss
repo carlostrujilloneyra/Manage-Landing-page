@@ -13,6 +13,12 @@
         cursor: pointer;
     }
 
+    &--new{
+        transform: scale(1.8);
+        background-image: url('../images/icon-close.svg');
+        background-size: cover;
+    }
+
     @include responsive(700px){
         display: none;
     }

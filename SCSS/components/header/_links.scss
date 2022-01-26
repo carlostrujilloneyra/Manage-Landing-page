@@ -3,8 +3,8 @@
 
 .main-list__link{
     height: 100%;
-    margin: 1.6rem;
-    padding: 1.2rem 2.4rem;
+    margin: 1.2rem;
+    padding: .4rem 2.4rem;
 
     @include responsive(700px){
         margin: 0 .4rem;
@@ -32,8 +32,14 @@
 
 .main-header__list-link{
     position: relative;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: var(--firstColorPrimary);
+    font-weight: 700;
+
+    @include responsive(700px){
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
 
     @include responsive(desktop){
         &:hover{
