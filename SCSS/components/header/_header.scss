@@ -3,7 +3,7 @@
 
 .main-header{
     position: fixed;
-    top: 0;
+    top: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,11 +11,12 @@
     height: 8rem;
     background-color: var(--colorWhite);
     padding: 0rem 2.4rem;
-    border-bottom: 0.2px solid rgba(0, 0, 0, .1);
+    border-bottom: .02rem solid rgba(0, 0, 0, .1);
     z-index: 200;
 
     @include responsive(tablet){
         position: relative;
+        top: 0;
         border-bottom: none;
         padding: 0 4.8rem;
     }
