@@ -3,4 +3,10 @@
 
 .main-subtitle--slider{
 	text-align: center;
+	font-size: 3.2rem;
+	margin-bottom: 7.2rem;
+
+	@include responsive(tablet){
+		font-size: 4rem;
+	}
 }

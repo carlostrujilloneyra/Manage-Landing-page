@@ -1,0 +1,16 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Title del card de slider
+
+.card-title{
+	font-weight: 700;
+	color: var(--firstColorPrimary);
+	margin-bottom: 1.6rem;
+}
+
+// Texto del card
+.main-paragraph--slider{
+	margin-bottom: 4.8rem;
+}
+

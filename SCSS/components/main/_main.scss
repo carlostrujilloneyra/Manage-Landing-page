@@ -16,11 +16,16 @@
 
 	@include responsive(desktop){
 		grid-template-columns: repeat(2, minmax(min-content,1fr));
-		grid-template-rows: repeat(1, minmax(54rem,55rem));
+		grid-template-rows: repeat(1, minmax(64rem,68rem));
 		column-gap: 2.4rem;
 		row-gap: 0;
 		padding: 0 10rem;
-		margin-bottom: 12rem;
+		margin-bottom: 8.4rem;
+	}
+
+	@include responsive(1080px){
+		grid-template-rows: repeat(1, minmax(54rem,58rem));
+		margin-bottom: 10rem;
 	}
 
 	@include responsive(1300px){
