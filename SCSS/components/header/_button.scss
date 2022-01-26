@@ -1,0 +1,43 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-button{
+    display: inline-block;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 1.6rem;
+    color: var(--colorWhite);
+    padding: 1.6rem 4rem;
+    z-index: 100;
+
+    &--header{
+        display: none;
+        
+        @include responsive(700px){
+            display: inline-block;
+        }
+    }
+
+    @include responsive(700px){
+        color: var(--colorWhite);
+        padding: 1.2rem 1.6rem;
+    }
+
+    &:hover::before{
+        opacity: .7;
+    }
+    
+    &::before{
+        @include before(0, 0, 100%, 100%){
+            background-color: var(--secondColorPrimary);
+            border-radius: 1.6rem;
+            z-index: -10;
+            transition: all .5s;
+        }
+    }
+    
+    @include responsive(desktop){
+        padding: 1.6rem 4rem;
+    }    
+}
