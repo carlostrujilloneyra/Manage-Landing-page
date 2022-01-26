@@ -9,18 +9,78 @@
 		font-size: 1.6rem;
 		margin-bottom: 4rem;
 	}
+
+	@include responsive(850px){
+		width: 90%;
+	}
+	
+	@include responsive(desktop){
+		width: 100%;
+	}
+
+	@include responsive(1400px){
+		width: 95%;
+	}
+
+	@include responsive(2800px){
+		width: 85%;
+	}
+
+	@include responsive(3000px){
+		width: 70%;
+	}
 }
 
 // Estilos para text-bold
 
 .text-bold{
-	display: inline-block;
+	position: relative;
+	display: block;
 	font-size: 1.6rem;
 	font-weight: 700;
 	color: var(--firstColorPrimary);
+	background-color: var(--colorBefore);
 	margin-bottom: 2.4rem;
+	padding: 1.2rem 0;
+	padding-left: 6.4rem;
+	border-radius: 3.2rem;
+
+	&::before{
+		@include before(0,0,5.4rem,100%){
+			content: '01';
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.6rem;
+			font-weight: 700;
+			background-color: var(--colorOrange);
+			color: var(--colorWhite);
+			margin-right: 1.2rem;
+			border-top-left-radius: 3.2rem;
+			border-bottom-left-radius: 3.2rem;
+		}
+	}
+
+	&-second{
+		&::before{
+			content: '02';
+		}
+	}
+
+	&-third{
+		&::before{
+			content: '03';
+		}
+	}
+	
+	@include responsive(850px){
+		width: 90%;
+	}
 
 	@include responsive(desktop){
+		width: 100%;
+		padding-left: 7.2rem;
 		margin-bottom: 2.4rem;
+		background-color: transparent;
 	}
 }

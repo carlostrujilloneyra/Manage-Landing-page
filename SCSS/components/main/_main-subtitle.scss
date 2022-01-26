@@ -10,4 +10,8 @@
 		font-size: 4rem;
 		margin-bottom: 2.4rem;
 	}
+
+	@include responsive(2800px){
+		width: 85%;
+	}
 }

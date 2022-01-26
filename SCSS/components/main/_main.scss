@@ -2,13 +2,16 @@
 @use '../../abstracts/mixins' as *;
 
 .main{
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(1,1fr);
-	row-gap: 6rem;
 	padding: 0 2.4rem;
+	margin-bottom: 4.8rem;
 
 	@include responsive(tablet){
 		padding: 0 3.6rem;
+		margin-bottom: 7.2rem;
+		row-gap: 2.4rem;
 	}
 
 	@include responsive(desktop){
@@ -17,11 +20,16 @@
 		column-gap: 2.4rem;
 		row-gap: 0;
 		padding: 0 10rem;
+		margin-bottom: 12rem;
 	}
 
 	@include responsive(1300px){
 		grid-template-columns: minmax(44rem, 46rem) minmax(54rem, 56rem);
 		column-gap: 4.8rem;
+	}
+
+	@include responsive(1400px){
+		grid-template-columns: repeat(2,1fr);
 	}
 
 	// Primera parte del main
