@@ -160,6 +160,23 @@ a {
   }
 }
 
+.container-main-hamburguer {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: linear-gradient(#242D52 20%, transparent 20%, transparent 40%, #242D52 40%, #242D52 60%, transparent 60%, transparent 80%, #242D52 80%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.container-main-hamburguer:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .container-main-hamburguer {
+    display: none;
+  }
+}
+
 .main-header__nav {
   width: 100%;
   padding: 4.8rem 0;
