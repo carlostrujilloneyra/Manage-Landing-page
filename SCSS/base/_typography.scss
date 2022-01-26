@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Estilos para los títulos, subtítulos, textos y botones
+
+h1, h2, h3{
+	font-family: var(--fontTitles);
+	font-weight: 400;
+	font-size: 4rem;
+	color: var(--firstColorPrimary);
+}
+
+h1{
+	font-weight: 500;
+	font-size: 4rem;
+
+	@include responsive(tablet){
+		font-size: 5.6rem;
+	}
+}
+
+p, a{
+	font-family: var(--fontText);
+}
+
+p{
+	font-size: 1.4rem;
+	line-height: 1.56;
+
+	@include responsive(tablet){
+		font-size: 1.6rem;
+	}
+}
+
+a{
+	text-decoration: none;
+}
