@@ -43,7 +43,8 @@
     transition: right .5s;
 
     &--new{
-        right: 1.5rem;
+        right: 1.2rem;
+        box-shadow: .6rem 1rem 1rem rgba(0, 0, 0, .2);
     }
     
     @include responsive(700px){

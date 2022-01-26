@@ -22,7 +22,11 @@
 
     @include responsive(700px){
         color: var(--colorWhite);
-        padding: 1.6rem 2.4rem;
+        padding: 1.6rem;
+    }
+
+    @include responsive(tablet){
+        padding: 1.6rem 2rem;  
     }
 
     @include responsive(820px){
