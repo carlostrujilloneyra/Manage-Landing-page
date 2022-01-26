@@ -1,0 +1,22 @@
+{
+  "name": "manage-landing-page",
+  "version": "1.0.0",
+  "description": "Tercer proyecto a realizar del lado Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlostrujilloneyra/Manage-Landing-page.git"
+  },
+  "author": "Carlos Trujillo Neyra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlostrujilloneyra/Manage-Landing-page/issues"
+  },
+  "homepage": "https://github.com/carlostrujilloneyra/Manage-Landing-page#readme",
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}
