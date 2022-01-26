@@ -6,7 +6,6 @@
 .main-hero{
 	display: grid;
 	grid-template-columns: repeat(1,1fr);
-	border: .1rem solid palegreen;
 	padding: 0 2.4rem;
 	
 	@include responsive(tablet){
@@ -15,11 +14,31 @@
 	}
 
 	@include responsive(desktop){
-		grid-template-columns: 1fr minmax(53rem, 54rem);
-		grid-template-rows: repeat(1, minmax(49rem, 1fr));
-		column-gap: 3.6rem;
+		grid-template-columns: 1fr minmax(46rem, 48rem);
+		grid-template-rows: repeat(1, minmax(54rem, 1fr));
+		column-gap: 2.4rem;
 		padding: 0 10rem;	
 	}
 
+	@include responsive(1100px){
+		grid-template-columns: 1fr minmax(52rem, 54rem);
+		column-gap: 3.6rem;
+	}
 
+	@include responsive(2700px){
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+// Contenedor de la imagen
+
+.main-hero__image{
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+
+	& img{
+		display: block;
+		width: 100%;
+	}
 }
