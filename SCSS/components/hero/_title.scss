@@ -6,6 +6,10 @@
 .main-hero__title{
 	margin-bottom: 1.2rem;
 
+	@include responsive(tablet){
+		margin-bottom: 2.4rem;
+	}
+
 	@include responsive(desktop){
 		margin-bottom: 2rem;
 	}

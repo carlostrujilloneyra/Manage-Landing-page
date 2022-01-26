@@ -2,11 +2,11 @@
 @use '../../abstracts/mixins' as *;
 
 .main-header__nav{
-    width: 100%;
+    width: calc(100vw - 3.2rem);
     background-color: var(--colorWhite);
-    height: 32rem;
-    border: .1rem solid black;
-    background-color: aqua;
+    height: 30.5rem;
+    box-shadow: .2rem .2rem .8rem outside rgba(0, 0, 0, .1);
+    border-radius: 1.2rem;
     
     @include responsive(700px){
         position: static;

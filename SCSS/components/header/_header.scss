@@ -18,7 +18,7 @@
     @include responsive(tablet){
         position: relative;
         border-bottom: none;
-        padding: 0 4.8rem;
+        padding: 0 3.6rem;
     }
 
     @include responsive(desktop){
@@ -36,14 +36,14 @@
     position: absolute;
     top: 12rem;
     right: -100vw;
-    width: calc(100vw - 2.4rem);
+    width: calc(100vw - 3.2rem);
     display: flex;
-    height: 32rem;
+    height: 30.5rem;
     z-index: 1000;
     transition: right .5s;
 
     &--new{
-        right: 1rem;
+        right: 1.5rem;
     }
     
     @include responsive(700px){
