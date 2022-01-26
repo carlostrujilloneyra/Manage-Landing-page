@@ -1,0 +1,25 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Contenedor Principal
+
+.main-hero{
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	border: .1rem solid palegreen;
+	padding: 0 2.4rem;
+	
+	@include responsive(tablet){
+		grid-template-columns: repeat(2,1fr);
+		padding: 0 4.8rem;
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: 1fr minmax(53rem, 54rem);
+		grid-template-rows: repeat(1, minmax(49rem, 1fr));
+		column-gap: 3.6rem;
+		padding: 0 10rem;	
+	}
+
+
+}
