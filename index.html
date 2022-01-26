@@ -12,34 +12,57 @@
 	<link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-	    <!-- Header -->
-    
-		<header class="main-header">
+	
+	<!-- Header -->
+	<header class="main-header">
+		
+		<!-- Logo -->
+		<a href="index.html" class="home">
+			<img src="images/logo.svg" alt="Logo-Principal" class="main-header__logo">
+		</a>
+		
+		<div class="main-header__content" id="main-header__content">
+			
+			<!-- Barra de navegación -->
+			<nav class="main-header__nav" id="main-header__nav">
+				<ul class="main-header__list">
+					<li class="main-list__link"><a href="#" class="main-header__list-link">Pricing</a></li>
+					<li class="main-list__link"><a href="#" class="main-header__list-link">Product</a></li>
+					<li class="main-list__link"><a href="#" class="main-header__list-link">About Us</a></li>
+					<li class="main-list__link"><a href="#" class="main-header__list-link">Careers</a></li>
+					<li class="main-list__link"><a href="#" class="main-header__list-link">Community</a></li>
+				</ul>
+			</nav>
+		
+		</div>
+		
+		<!-- Menú Hamburguesa -->
+		<div class="container-main-hamburguer" id="main-hamburguer"></div>
+		
+		<!-- Botón del Header -->
+		<a href="#" class="main-button main-button--header">Get Started</a>
+		
+	</header>
 
-			<!-- Logo -->
-			<a href="index.html" class="home">
-				<img src="images/logo.svg" alt="Logo-Principal" class="main-header__logo">
-			</a>
-	
-			<div class="main-header__content" id="main-header__content">
-				
-				<!-- Barra de navegación -->
-				<nav class="main-header__nav" id="main-header__nav">
-					<ul class="main-header__list">
-						<li class="main-list__link"><a href="#" class="main-header__list-link">Pricing</a></li>
-						<li class="main-list__link"><a href="#" class="main-header__list-link">Product</a></li>
-						<li class="main-list__link"><a href="#" class="main-header__list-link">About Us</a></li>
-						<li class="main-list__link"><a href="#" class="main-header__list-link">Careers</a></li>
-						<li class="main-list__link"><a href="#" class="main-header__list-link">Community</a></li>
-					</ul>
-				</nav>
-			</div>
-	
-			<!-- Menú Hamburguesa -->
-			<div class="container-main-hamburguer" id="main-hamburguer"></div>
-	
-			<!-- Botón del Header -->
-			<a href="#" class="main-button main-button--header">Get Started</a>
-		</header>
+	<!-- Hero -->
+	<div class="main-hero">
+
+		<!-- Aquí irá el título, texto y botón de Hero -->
+		<div class="main-hero__info">
+			<h1 class="main-hero__title">Bring everyone together to build better products.</h1>
+			<p class="main-hero__text main-hero__text--mobile">Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+			<a href="#" class="main-button main-button--hero">Get Started</a>
+
+		</div>
+
+		<!-- Aquí irá la imagen de hero -->
+		<div class="main-hero__image">
+			<img src="images/illustration-intro.svg" alt="">
+		</div>
+	</div>
+
+
+
+	<script src="JS/script.js"></script>
 </body>
 </html>
