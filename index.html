@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="shortcut icon" href="images/White-logo.png" type="image/png">
+	<title>Manage <Landing-page></Landing-page></title>
+	<link rel="shortcut icon" href="images/logo.svg" type="image/png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 	<link rel="stylesheet" href="CSS/styles.css">
 
 </head>
@@ -93,41 +95,60 @@
 	<div class="main-slider">
 		<h2 class="main-subtitle main-subtitle--slider">What they’ve said</h2>
 
-		<!-- Aquí irán los elementos a realizar slider -->
-		<div class="main-slider__box" id="autoWidth" class="cs-hidden">
+		<div class="carousel">
+			<div class="carousel__container">
 
-			<!-- Primer Card -->
-			<div class="main-slider__card ">
-				<img src="images/avatar-anisha.png" alt="avatar-anisha" class="main-slider__img">
-				<p class="card-title">Anisha Li</p>
-				<p class="main-paragraph main-paragraph--slider">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+				<!-- Botón anterior -->
+				<button aria-label="Anterior" class="carousel__anterior">
+					<i class="fas fa-chevron-left"></i>
+				</button>
+
+				<!-- Elementos del carousel -->
+				<div class="carousel__list">
+
+					<!-- Primer elemento -->
+					<div class="carousel__element">
+						<img src="images/avatar-richard.png" alt="avatar-richard">
+						<p class="card-title">Richard Watts</p>
+						<p class=" main-paragraph main-paragraph--slider">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+					</div>
+					
+					<!-- Segundo elemento -->
+					<div class="carousel__element">
+						<img src="images/avatar-anisha.png" alt="avatar-anisha">
+						<p class="card-title">Anisha Li</p>
+						<p class=" main-paragraph main-paragraph--slider">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+					</div>
+
+					<!-- Tercer elemento -->
+					<div class="carousel__element">
+						<img src="images/avatar-shanai.png" alt="avatar-shanai">
+						<p class="card-title">Shanai Gough</p>
+						<p class=" main-paragraph main-paragraph--slider">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+					</div>
+					
+					<!-- Cuarto elemento -->
+					<div class="carousel__element carousel__element--no-margin-rigth">
+						<img src="images/avatar-ali.png" alt="avatar-ali">
+						<p class="card-title">Ali Bravo</p>
+						<p class=" main-paragraph main-paragraph--slider">“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+					</div>
+
+				</div>
+
+				<!-- Botón siguiente -->
+				<button aria-label="Siguiente" class="carousel__siguiente">
+					<i class="fas fa-chevron-right"></i>
+				</button>
+
 			</div>
 
-			  <!-- Segundo Card -->
-			  <div class="main-slider__card">
-                <img src="images/avatar-ali.png" alt="avatar-ali" class="main-slider__img">
-                <p class="card-title">Ali Bravo</p>
-                <p class="main-paragraph main-paragraph--slider">“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
-			  </div>
-
-            <!-- Tercer Card -->
-            <div class="main-slider__card">
-                <img src="images/avatar-richard.png" alt="avatar-richard" class="main-slider__img">
-                <p class="card-title">Richard Watts</p>
-                <p class="main-paragraph main-paragraph--slider">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
-			</div>
-
-			<!-- Cuarto card -->
-			<div class="main-slider__card">
-                <img src="images/avatar-shanai.png" alt="avatar-shanai" class="main-slider__img">
-                <p class="card-title">Shanai Gough</p>
-                <p class="main-paragraph main-paragraph--slider">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
-			</div>
-
+			<div role="tablist" class="carousel__indicadores"></div>
 		</div>
-
 		<!-- Botón -->
-		<a href="#" class="main-button main-button--slider">Get Started</a>
+		<div class="main-slider__button-container">
+			<a href="#" class="main-button main-button--slider">Get Started</a>
+		</div>
 	</div>
 
 	<!-- Articulo antes de llegar al footer -->
@@ -227,6 +248,10 @@
 	<!-- Copyright -->
 	<p class="main-paragraph main-paragraph--footer footer-last-part">&copy;Copyright 2020. All Rights Reserved</p>
 
+
+	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="JS/script.js"></script>
+	<script src="JS/slider.js"></script>
 </body>
 </html>
