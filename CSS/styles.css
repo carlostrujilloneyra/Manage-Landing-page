@@ -19,17 +19,17 @@
 /* Mixin para before */
 /* Mixin para after */
 @media screen and (min-width: 1600px) {
-  .main-header, .main-hero, .main, .main-slider {
+  .main-header, .main-hero, .main, .main-slider, .main-article {
     max-width: 80%;
   }
 }
 @media screen and (min-width: 1900px) {
-  .main-header, .main-hero, .main, .main-slider {
+  .main-header, .main-hero, .main, .main-slider, .main-article {
     max-width: 65%;
   }
 }
 @media screen and (min-width: 2300px) {
-  .main-header, .main-hero, .main, .main-slider {
+  .main-header, .main-hero, .main, .main-slider, .main-article {
     max-width: 50%;
   }
 }
@@ -714,6 +714,7 @@ a {
   padding: 0 2.4rem;
   border: 0.1rem solid green;
   margin-bottom: 4.8rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 740px) {
   .main-slider {
@@ -784,6 +785,89 @@ a {
 
 .main-paragraph--slider {
   margin-bottom: 4.8rem;
+}
+
+.main-article {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr 10rem;
+  width: 100%;
+  padding: 6.4rem 2.4rem;
+  background-color: var(--colorOrange);
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 740px) {
+  .main-article {
+    padding: 4.8rem 3.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-article {
+    text-align: start;
+    grid-template-columns: 1fr minmax(min-content, 30rem);
+    grid-template-rows: minmax(22rem, 24rem);
+    column-gap: 2.4rem;
+    padding: 4.8rem 10rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-article {
+    grid-template-columns: minmax(80rem, 84rem) minmax(min-content, 30rem);
+    grid-template-rows: minmax(20rem, 22rem);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main-article {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(18rem, 20rem);
+  }
+}
+
+.main-subtitle--white {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 2.4rem;
+}
+@media screen and (min-width: 1200px) {
+  .main-subtitle--white {
+    width: 80%;
+  }
+}
+
+.main-button--white {
+  color: var(--colorOrange);
+  background-color: var(--colorWhite);
+}
+.main-button--white::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorWhite);
+  border-radius: 1.6rem;
+  z-index: -10;
+  transition: all 0.5s;
+}
+.main-button--white:hover {
+  color: rgba(241, 84, 57, 0.3);
+  transition: all 0.5s;
+}
+.main-button--white:hover::before {
+  opacity: 0.3;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .container-button {
+    justify-content: flex-end;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
