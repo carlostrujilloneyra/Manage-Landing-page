@@ -1,18 +1,44 @@
 @use '../../abstracts/variables' as *;
 @use '../../abstracts/mixins' as *;
 
-.main-slider__card{
-	width: 100%;
+.carousel__element{
+	width: 90%;
+	height: 25rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background-color: rgb(249, 249, 249);
-	padding: 0 1.6rem;
+	background-color: #FAFAFA;
+	padding: 0 1.2rem;
+	margin-bottom: 1.2rem;
+	margin-right: 1.6rem;
 	border-radius: 1.6rem;
 
-	@include responsive(700px){
-		min-width: 56rem;
-		margin-right: 3.2rem;
+	& img{
+		display: block;
+		width: 7.2rem;
+		height: 7.2rem;
+		margin: 1.6rem 0;
 	}
+
+	@include responsive(700px){
+		width: 80%;
+		padding: 0 2.4rem;
+		margin-right: 3.2rem; 
+	}
+
+	@include responsive(desktop){
+		//No se recomiendo usar el "!importan", pero con fines de aplicar el efecto lo haremos
+		width: 60rem !important;
+	}
+
+	@include responsive(2800px){
+		width: 90rem !important;
+	}
+
+	&--no-margin-rigth{
+		margin-right: 0;
+	}
+
+
 }

@@ -1,0 +1,62 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.carousel__anterior, .carousel__siguiente{
+	position: absolute;
+	display: none;
+	width: 3.6rem;
+	height: 3.6rem;
+	border: none;
+	top: calc(50% - 3.5rem);
+	cursor: pointer;
+	line-height: 3rem;
+	text-align: center;
+	color: var(--colorWhite);
+	border-radius: 3.2rem;
+	opacity: .4;
+	transition: all .5s;
+	z-index: 100;
+
+	&::before{
+		@include before(0, 0, 100%, 100%){
+			color: var(--colorWhite);
+			background-color: var(--colorOrange);
+			border-radius: 3.2rem;
+			z-index: -100;
+		}
+	}
+	
+	@include responsive(desktop){
+		display: block;
+	}
+	
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+	transition: all .7s;
+}
+
+.carousel__anterior {
+	left: -4.8rem;
+}
+
+.carousel__siguiente {
+	right: -3.6rem;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	background: var(--colorOrange);
+	opacity: .2;
+
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}

@@ -2,15 +2,12 @@
 @use '../../abstracts/mixins' as *;
 
 .main-slider{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	width: 100%;
 	height: auto;
+	display: flex;
+	flex-direction: column;
 	padding: 0 2.4rem;
-	border: .1rem solid green;
 	margin-bottom: 4.8rem;
-	overflow: hidden;
 
 	@include responsive(tablet){
 		padding: 0 3.6rem;
@@ -20,20 +17,17 @@
 	@include responsive(desktop){
 		padding: 0 10rem;
 		margin-bottom: 12rem;
+	}
 
+	&__button-container{
+		align-self: center;
 	}
 }
 
+.carousel{
+	margin-bottom: 4.8rem;
+}
 
-// Contenedor de los cards
-
-.main-slider__box{
-	width: 100%;
-	list-style: none;
-	display: flex;
-	margin-bottom: 6.4rem;
-
-	@include responsive(desktop){
-		margin-bottom: 4.8rem;
-	}
+.carousel__container{
+	position: relative;
 }
