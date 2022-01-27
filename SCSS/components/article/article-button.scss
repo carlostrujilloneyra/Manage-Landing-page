@@ -1,0 +1,36 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-button--white{
+	color: var(--colorOrange);
+	background-color: var(--colorWhite);
+
+	&::before{
+        @include before(0, 0, 100%, 100%){
+            background-color: var(--colorWhite);
+            border-radius: 1.6rem;
+            z-index: -10;
+            transition: all .5s;
+        }
+    }
+
+	&:hover{
+        color: rgba(241, 84, 57, .3);
+		transition: all .5s;
+    }
+
+	&:hover::before{
+		opacity: .3;
+	}
+}
+
+// Contenedor
+.container-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include responsive(desktop){
+		justify-content: flex-end;
+	}
+}

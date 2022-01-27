@@ -1,0 +1,13 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-subtitle--white{
+	color: white;
+	font-size: 4rem;
+	margin-bottom: 2.4rem;
+
+	@include responsive(1200px){
+		width: 80%;
+	}
+
+}

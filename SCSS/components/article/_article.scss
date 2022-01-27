@@ -1,0 +1,35 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-article{
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	grid-template-rows: 1fr 10rem;
+	width: 100%;
+	padding: 6.4rem 2.4rem;
+	background-color: var(--colorOrange);
+	align-items: center;
+	text-align: center;
+
+	@include responsive(tablet){
+		padding: 4.8rem 3.6rem;
+	}
+
+	@include responsive(desktop){
+		text-align: start;
+		grid-template-columns: 1fr minmax(min-content,30rem);
+		grid-template-rows: minmax(22rem, 24rem);
+		column-gap: 2.4rem;
+		padding: 4.8rem 10rem;
+	}
+
+	@include responsive(1200px){
+		grid-template-columns: minmax(80rem, 84rem) minmax(min-content,30rem);
+		grid-template-rows: minmax(20rem, 22rem);
+	}
+
+	@include responsive(1300px){
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: minmax(18rem, 20rem);
+	}
+}
