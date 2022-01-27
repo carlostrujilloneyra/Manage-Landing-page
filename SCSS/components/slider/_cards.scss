@@ -12,6 +12,7 @@
 	border-radius: 1.6rem;
 
 	@include responsive(700px){
-		max-width: 54rem;
+		min-width: 56rem;
+		margin-right: 3.2rem;
 	}
 }
