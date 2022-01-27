@@ -28,7 +28,7 @@
     &__logo{
         display: block;
         width: 15rem;
-        height: 3rem;
+        height: 2.6rem;
     }
 }
  
@@ -61,7 +61,7 @@
 
 .home{
     width: 15rem;
-    height: 3rem;
+    height: 2.6rem;
     margin-right: 1.6rem;
 
     @include responsive(tablet){
