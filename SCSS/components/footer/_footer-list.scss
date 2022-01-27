@@ -1,0 +1,40 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Lista 
+
+.main-footer__list{
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	column-gap: 3.2rem;
+	padding-left: 2.4rem;
+
+	@include responsive(560px){
+		justify-items: center;
+	}
+
+	@include responsive(desktop){
+		column-gap: 2.4rem;
+		justify-items: flex-start;
+	}
+
+	@include responsive(1140px){
+		column-gap: 3.6rem;
+	}
+}
+
+// Items
+
+.main-footer__items{
+	margin-bottom: 1.4rem;
+}
+
+// Enlaces
+
+.main-footer__enlace{
+	font-size: 1.5rem;
+	color: white;
+	font-weight: 300;
+	padding: .4rem;
+}

@@ -1,0 +1,34 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-footer{
+	width: 100%;
+	display: grid;
+	grid-template-rows: 7.2rem minmax(14rem, 15rem) minmax(10rem, 12rem);
+	row-gap: 2.4rem;
+	background-color: var(--colorBlack);
+	padding: 3.6rem 2.4rem 2.4rem 2.4rem;
+
+	@include responsive(700px){
+		padding-top: 6.4rem;
+	}
+
+	@include responsive(desktop){
+		padding: 7.2rem 10rem 4rem 10rem;
+		grid-template-columns: minmax(16rem, 18rem) 1fr 1fr;
+		column-gap: 1.6rem;
+		grid-template-rows: repeat(1,minmax(12rem, 14rem));
+	}
+
+	@include responsive(1140px){
+		justify-items: center;
+		column-gap: 3.6rem;
+	}
+
+	&__logo{
+		margin-top: 1.6rem;
+		margin-bottom: 3.6rem;
+		width: 16rem;
+		height: 2.6rem;
+	}
+}

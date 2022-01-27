@@ -1,0 +1,91 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+form{
+	@include responsive(560px){
+		display: flex;
+		justify-content: center;
+	}
+
+	@include responsive(desktop){
+		justify-content: flex-start;
+		order: 2;
+	}
+
+	@include responsive(1140px){
+		justify-content: flex-end;
+	}
+}
+
+input[type="email"]{
+
+	@include responsive(360px){
+		width: 20rem;
+		height: 5rem;
+		font-size: 1.4rem;
+		color: var(--firstColorPrimary);
+		border: none;
+		outline: none;
+		padding-left: 2.4rem;
+		border-radius: 3.6rem;
+		margin-right: .8rem;	
+	}
+
+	@include responsive(380px){
+		width: 24rem;
+	}
+
+	&:focus::placeholder{
+		opacity: 0;
+		transition: all .4s;
+	}
+	
+	@include responsive(560px){
+		width: 36rem;
+	}
+
+	@include responsive(630px){
+		width: 40rem;
+		font-size: 1.6rem;
+	}
+
+	@include responsive(tablet){
+		width: 50rem;
+		margin-right: 1.6rem;
+	}
+
+	@include responsive(desktop){
+		width: 24rem;
+		margin-right: 1.6rem;
+	}
+
+	@include responsive(1140px){
+		width: 32rem;
+	}
+
+}
+
+input[type="submit"]{
+	width: 8rem;
+	height: 5rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+	border-radius: 3.6rem;
+	border: none;
+	outline: none;
+	color: var(--colorWhite);
+	background-color: var(--colorOrange);
+
+	@include responsive(560px){
+		width: 12rem;
+	}
+
+	@include responsive(630px){
+		width: 15rem;
+		font-size: 1.6rem;
+	}
+
+	@include responsive(desktop){
+		width: 8rem;
+	}
+}

@@ -1,0 +1,72 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Contenedor del logo y icons
+
+.main-footer__container-logo-icons{
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	grid-template-rows: repeat(2,minmax(3.2rem, 3.6rem));
+	justify-items: center;
+	row-gap: 2.4rem;
+
+	@include responsive(desktop){
+		order: -2;
+		justify-items: flex-start;
+		grid-template-rows: repeat(2,1fr);
+	}
+}
+
+// Cambiar order cuando sea desktop
+
+.container-footer-icons{
+	@include responsive(desktop){
+		order: 2;
+	}
+}
+
+.container-footer-logo{
+	@include responsive(desktop){
+		order: -2;
+	}
+}
+
+// Icons
+
+.social-network{
+	display: inline-block;
+	width: 3.2rem;
+	height: 3.2rem;
+	margin-right: 2.4rem;
+
+	@include responsive(desktop){
+		width: 2rem;
+		height: 2rem;
+		margin-right: 1.2rem;
+		order: 1;
+	}
+}
+
+.main-footer__icons{
+	display: block;
+	width: 3.2rem;
+	height: 3.2rem;
+	transition: all .4s;
+
+	&:hover{
+		filter: invert(44%) sepia(22%) saturate(2896%) hue-rotate(334deg) brightness(100%) contrast(100%);
+		transition: all .4s;
+	}
+
+	@include responsive(desktop){
+		width: 2rem;
+		height: 2rem;
+		order: -2;
+	}
+}
+
+.main-footer__logo-return{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
