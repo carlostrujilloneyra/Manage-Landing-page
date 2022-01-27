@@ -87,5 +87,11 @@ input[type="submit"]{
 
 	@include responsive(desktop){
 		width: 8rem;
+
+		&:hover{
+			cursor: pointer;
+		}
 	}
+
+
 }
