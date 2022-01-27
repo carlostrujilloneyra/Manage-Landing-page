@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.main-header, .main-hero, .main, .main-slider{
+.main-header, .main-hero, .main, .main-slider, .main-article{
     @include responsive(1600px){
         max-width: 80%;
     }
