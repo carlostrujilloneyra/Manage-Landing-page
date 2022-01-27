@@ -999,6 +999,9 @@ input[type=submit] {
   input[type=submit] {
     width: 8rem;
   }
+  input[type=submit]:hover {
+    cursor: pointer;
+  }
 }
 
 .main-footer__list {
