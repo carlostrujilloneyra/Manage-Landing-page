@@ -1028,12 +1028,17 @@ input[type=submit] {
 .main-footer__items {
   margin-bottom: 1.4rem;
 }
+.main-footer__items:hover .main-footer__enlace {
+  color: var(--colorOrange);
+  transition: all 0.4s;
+}
 
 .main-footer__enlace {
   font-size: 1.5rem;
   color: white;
   font-weight: 300;
   padding: 0.4rem;
+  transition: all 0.4s;
 }
 
 .main-footer__container-logo-icons {
