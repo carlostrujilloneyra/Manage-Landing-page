@@ -2,10 +2,11 @@
 @use '../../abstracts/mixins' as *;
 
 .main-footer{
+	position: relative;
 	width: 100%;
 	display: grid;
 	grid-template-rows: 7.2rem minmax(14rem, 15rem) minmax(10rem, 12rem);
-	row-gap: 2.4rem;
+	row-gap: 3.6rem;
 	background-color: var(--colorBlack);
 	padding: 3.6rem 2.4rem 2.4rem 2.4rem;
 

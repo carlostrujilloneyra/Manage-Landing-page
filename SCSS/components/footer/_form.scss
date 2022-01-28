@@ -2,8 +2,10 @@
 @use '../../abstracts/mixins' as *;
 
 form{
+	position: relative;
+	display: flex;
+
 	@include responsive(560px){
-		display: flex;
 		justify-content: center;
 	}
 
@@ -20,10 +22,13 @@ form{
 input[type="email"]{
 
 	@include responsive(360px){
-		width: 20rem;
+		display: block;
+		position: relative;
+		width: 22rem;
 		height: 5rem;
 		font-size: 1.4rem;
-		color: var(--firstColorPrimary);
+		color: #8D8D8D;
+		font-family: var(--fontText);
 		border: none;
 		outline: none;
 		padding-left: 2.4rem;
@@ -45,7 +50,7 @@ input[type="email"]{
 	}
 
 	@include responsive(630px){
-		width: 40rem;
+		width: 38rem;
 		font-size: 1.6rem;
 	}
 
@@ -76,8 +81,10 @@ input[type="submit"]{
 	color: var(--colorWhite);
 	background-color: var(--colorOrange);
 
+
 	@include responsive(560px){
 		width: 12rem;
+		margin-left: .8rem;
 	}
 
 	@include responsive(630px){
@@ -94,4 +101,83 @@ input[type="submit"]{
 	}
 
 
+}
+
+// Íconos de validación
+// fas fa-check-circle
+// fas fa-exclamation-circle
+
+.form-control{
+	position: relative;
+	width: 22.5rem;
+	height: 7.2rem;
+	margin-right: 1.2rem;
+	border-radius: 3.6rem;
+
+	@include responsive(380px){
+		width: 24rem;
+	}
+
+	@include responsive(560px){
+		width: 37rem;
+	}
+
+	@include responsive(desktop){
+		width: 25rem;
+		height: 8rem;
+	}
+
+	@include responsive(700px){
+		width: auto;
+	}
+}
+
+.form-control i{
+	position: absolute;
+	top: 1.5rem;
+	right: 1rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	font-size: 1.8rem;
+	visibility: hidden;
+
+	@include responsive(700px){
+		top: 1.5rem;
+		right: 2.8rem;
+	}
+}
+
+.form-control small{
+	position: absolute;
+	left: 1.2rem;
+	font-size: 1.4rem;
+	font-family: var(--fontText);
+	color: var(--colorWhite);
+	margin-top: .8rem;
+	visibility: hidden;
+}
+
+// Estilos JavaScript
+
+.form-control.succes i.fa-check-circle{
+	visibility: visible;
+	color: rgb(0, 201, 72);
+}
+
+.form-control.succes .input-email{
+	outline: .2rem solid rgb(0, 201, 72);
+}
+
+.form-control.error .input-email{
+	border: .2rem solid rgb(247, 96, 89) ;
+}
+
+.form-control.error i.fa-exclamation-circle{
+	visibility: visible;
+	color: rgb(247, 96, 89);
+}
+
+.form-control.error small{
+	visibility: visible;
+	color: rgb(247, 96, 89);
 }
