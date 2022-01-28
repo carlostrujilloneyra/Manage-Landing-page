@@ -1,7 +1,7 @@
 # Manage-Landing-page
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/50873002/150611360-4ba4decf-ecbb-4d8f-9eb1-46758055c437.gif" width="100%">
+  <img src="https://user-images.githubusercontent.com/50873002/151486132-936eda8d-8136-41c5-b9de-f35ffd470c1d.gif" width="100%">
 </p>
 
 
