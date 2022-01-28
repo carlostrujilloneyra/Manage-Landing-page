@@ -396,7 +396,7 @@ a {
   top: -30rem;
   right: 0;
   left: auto;
-  background-image: url("../../../images/bg-tablet-pattern.svg");
+  background-image: url("../images/bg-tablet-pattern.svg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -100;
