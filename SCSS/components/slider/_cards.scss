@@ -28,7 +28,8 @@
 	}
 
 	@include responsive(desktop){
-		//No se recomiendo usar el "!importan", pero con fines de aplicar el efecto lo haremos
+		//No se recomiendo usar el "!importan"
+		// pero con fines de aplicar el efecto lo haremos
 		width: 60rem !important;
 	}
 
