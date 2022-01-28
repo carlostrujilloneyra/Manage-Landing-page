@@ -2,6 +2,7 @@
 @use '../../abstracts/mixins' as *;
 
 .main-article{
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(1,1fr);
 	grid-template-rows: 1fr 10rem;
@@ -10,6 +11,7 @@
 	background-color: var(--colorOrange);
 	align-items: center;
 	text-align: center;
+	overflow: hidden;
 
 	@include responsive(tablet){
 		padding: 4.8rem 3.6rem;
@@ -24,12 +26,64 @@
 	}
 
 	@include responsive(1200px){
-		grid-template-columns: minmax(80rem, 84rem) minmax(min-content,30rem);
-		grid-template-rows: minmax(20rem, 22rem);
+		grid-template-columns: minmax(78rem, 82rem) minmax(min-content,30rem);
+		grid-template-rows: minmax(20rem, 23rem);
 	}
 
 	@include responsive(1300px){
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: minmax(18rem, 20rem);
+	}
+
+	&::before{
+		@include before(0, 0, 100%, 100%){
+			top: 1.6rem;
+			background-image: url('../images/bg-simplify-section-mobile.svg');
+			background-repeat: no-repeat;
+
+			@include responsive(desktop){
+				top: 0;
+				left: auto;
+				background-image: url('../images/bg-simplify-section-desktop.svg');
+				transform: translateY(-2rem) translateX(-10rem) scale(1.2);
+			}
+
+			@include responsive(1120px){
+				transform: translateY(-4rem) translateX(-6rem) scale(1.3, 1.3);
+			}
+
+			@include responsive(1300px){
+				transform: translateY(-6rem) translateX(4rem) scale(1.3, 1.4);
+			}
+
+			@include responsive(1500px){
+				transform: translateY(-8rem) translateX(18rem) scale(1.4, 1.6);
+			}
+
+			@include responsive(1600px){
+				transform: translateY(-8rem) translateX(4rem) scale(1.4, 1.6);
+			}
+
+			@include responsive(1800px){
+				transform: translateY(-8rem) translateX(10rem) scale(1.4, 1.6);
+			}
+
+			@include responsive(1900px){
+				transform: translateY(-4rem) translateX(0) scale(1.4, 1.4);
+			}
+
+			@include responsive(2300px){
+				transform: translateY(-6rem) translateX(-15rem) scale(1.4, 1.4);
+			}
+
+
+			@include responsive(2800px){
+				transform: translateY(-8rem) translateX(14rem) scale(1.4, 1.6);
+			}
+
+			@include responsive(3000px){
+				transform: translateY(-8rem) translateX(30rem) scale(1.4, 1.6);
+			}
+		}
 	}
 }

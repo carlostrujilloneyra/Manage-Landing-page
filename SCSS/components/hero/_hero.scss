@@ -10,7 +10,6 @@
 	padding: 3.6rem 2.4rem 2.4rem 2.4rem;
 	row-gap: 3.6rem;
 	margin-bottom: 3.2rem;
-	overflow: hidden;
 
 	&::before{
 		@include before(0, 0, 100%, 100%){
@@ -21,6 +20,33 @@
 
 		@include responsive(tablet){
 			display: none;
+		}
+	}
+
+	&::after{
+		@include after(0,0, 85%, 85%){
+			top: -30rem;
+			right: 0;
+			left: auto;
+			background-image: url('../../../images/bg-tablet-pattern.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -100;
+		}
+		
+		@include responsive(desktop){
+			top: -16rem;
+			width: 50%;
+			height: 100%;
+			right: -4rem;
+		}
+
+		@include responsive(1200px){
+			height: 110%;
+		}
+
+		@include responsive(1500px){
+			height: 120%;
 		}
 	}
 	
