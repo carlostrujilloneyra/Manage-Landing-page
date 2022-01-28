@@ -793,11 +793,12 @@ a {
   height: 3.6rem;
   border: none;
   top: calc(50% - 3.5rem);
-  cursor: pointer;
   line-height: 3rem;
   text-align: center;
   color: var(--colorWhite);
+  font-size: 1.4rem;
   border-radius: 3.2rem;
+  cursor: pointer;
   opacity: 0.4;
   transition: all 0.5s;
   z-index: 100;
@@ -1063,10 +1064,11 @@ a {
 }
 
 .main-footer {
+  position: relative;
   width: 100%;
   display: grid;
   grid-template-rows: 7.2rem minmax(14rem, 15rem) minmax(10rem, 12rem);
-  row-gap: 2.4rem;
+  row-gap: 3.6rem;
   background-color: var(--colorBlack);
   padding: 3.6rem 2.4rem 2.4rem 2.4rem;
 }
@@ -1096,9 +1098,12 @@ a {
   height: 2.6rem;
 }
 
+form {
+  position: relative;
+  display: flex;
+}
 @media screen and (min-width: 560px) {
   form {
-    display: flex;
     justify-content: center;
   }
 }
@@ -1116,10 +1121,13 @@ a {
 
 @media screen and (min-width: 360px) {
   input[type=email] {
-    width: 20rem;
+    display: block;
+    position: relative;
+    width: 22rem;
     height: 5rem;
     font-size: 1.4rem;
-    color: var(--firstColorPrimary);
+    color: #8D8D8D;
+    font-family: var(--fontText);
     border: none;
     outline: none;
     padding-left: 2.4rem;
@@ -1143,7 +1151,7 @@ input[type=email]:focus::placeholder {
 }
 @media screen and (min-width: 630px) {
   input[type=email] {
-    width: 40rem;
+    width: 38rem;
     font-size: 1.6rem;
   }
 }
@@ -1179,6 +1187,7 @@ input[type=submit] {
 @media screen and (min-width: 560px) {
   input[type=submit] {
     width: 12rem;
+    margin-left: 0.8rem;
   }
 }
 @media screen and (min-width: 630px) {
@@ -1194,6 +1203,84 @@ input[type=submit] {
   input[type=submit]:hover {
     cursor: pointer;
   }
+}
+
+.form-control {
+  position: relative;
+  width: 22.5rem;
+  height: 7.2rem;
+  margin-right: 1.2rem;
+  border-radius: 3.6rem;
+}
+@media screen and (min-width: 380px) {
+  .form-control {
+    width: 24rem;
+  }
+}
+@media screen and (min-width: 560px) {
+  .form-control {
+    width: 37rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .form-control {
+    width: 25rem;
+    height: 8rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .form-control {
+    width: auto;
+  }
+}
+
+.form-control i {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.8rem;
+  visibility: hidden;
+}
+@media screen and (min-width: 700px) {
+  .form-control i {
+    top: 1.5rem;
+    right: 2.8rem;
+  }
+}
+
+.form-control small {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.4rem;
+  font-family: var(--fontText);
+  color: var(--colorWhite);
+  margin-top: 0.8rem;
+  visibility: hidden;
+}
+
+.form-control.succes i.fa-check-circle {
+  visibility: visible;
+  color: #00c948;
+}
+
+.form-control.succes .input-email {
+  outline: 0.2rem solid #00c948;
+}
+
+.form-control.error .input-email {
+  border: 0.2rem solid #f76059;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #f76059;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #f76059;
 }
 
 .main-footer__list {
