@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 	<link rel="stylesheet" href="CSS/styles.css">
+	<!-- Animaciones mediante el scroll -->
+	<script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
@@ -167,9 +169,19 @@
 	<footer class="main-footer">
 
 		<!-- Pequeño formulario -->
-		<form action="#" class="main-form">
-			<input type="email" placeholder="Updates in your inbox...">
-			<input type="submit" value="Go">
+		<form action="#" class="main-form" id="main-form">
+			
+			<div class="form-control" id="form-control">
+
+				<input type="email" placeholder="car20@hotmail.com" id="input-email" class="input-email">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small id="small">Please insert a valid email</small>
+
+			</div>
+
+			<input type="submit" value="Go" id="input-submit">
+
 		</form>
 
 		<!-- Lista -->
@@ -201,7 +213,7 @@
 				</li>
 				
 				<li class="main-footer__items">
-					<a href="#" class="main-footer__enlace">Privacy Policy</a>
+					<a href="#" class="main-footer__enlace">Privacy</a>
 				</li>
 			</ul>
 		</div>
@@ -247,11 +259,11 @@
 
 	<!-- Copyright -->
 	<p class="main-paragraph main-paragraph--footer footer-last-part">&copy;Copyright 2020. All Rights Reserved</p>
-
-
+	
 	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="JS/script.js"></script>
+	<script src="JS/animaciones.js"></script>
 	<script src="JS/slider.js"></script>
 </body>
 </html>
