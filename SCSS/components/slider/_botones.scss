@@ -8,11 +8,12 @@
 	height: 3.6rem;
 	border: none;
 	top: calc(50% - 3.5rem);
-	cursor: pointer;
 	line-height: 3rem;
 	text-align: center;
 	color: var(--colorWhite);
+	font-size: 1.4rem;
 	border-radius: 3.2rem;
+	cursor: pointer;
 	opacity: .4;
 	transition: all .5s;
 	z-index: 100;
