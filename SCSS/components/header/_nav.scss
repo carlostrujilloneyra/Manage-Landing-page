@@ -3,8 +3,8 @@
 
 .main-header__nav{
     width: calc(100vw - 3.2rem);
-    background-color: var(--colorWhite);
     height: 30.5rem;
+    background-color: var(--colorWhite);
     border-radius: 1.2rem;
     
     @include responsive(700px){
