@@ -154,6 +154,7 @@ a {
     width: 55%;
     height: 8rem;
     justify-content: center;
+    box-shadow: none;
   }
 }
 
@@ -197,8 +198,8 @@ a {
 
 .main-header__nav {
   width: calc(100vw - 3.2rem);
-  background-color: var(--colorWhite);
   height: 30.5rem;
+  background-color: var(--colorWhite);
   border-radius: 1.2rem;
 }
 @media screen and (min-width: 700px) {
